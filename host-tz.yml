@@ -5,7 +5,7 @@
   gather_facts: False
   become: true
   vars:
-    hostname: taranto-cateyes
+    hostname: 204-cateyes
     tz: Antarctica/McMurdo
     token: T04NJ722U/BQB4MBBHV/RZPNWsz38MD1WtuVcena5reb
     
@@ -18,7 +18,7 @@
     
     - name: Set hostname
       hostname:
-        name: "{{ hostname }}"
+        name: "{{ hostname }}-{{ svridx }}"
           
     - name: Dump host facts
       setup: 
